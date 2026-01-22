@@ -1,7 +1,7 @@
 locals{
     common_name="${var.project_name}-{var.environment}"
     common_tags={
-        Name=var.project
+        Name=var.project_name
         terraform=true
     }
 }
