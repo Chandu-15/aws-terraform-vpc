@@ -3,8 +3,18 @@ resource "aws_vpc" "main" {
     instance_tenancy= "default"
     enable_dns_hostnames= true
     tags= merge(
+        var.vpc_tags,
         local.common_tags , 
-       {Name="${local.common_name}-dev-vpc"}
+       {Name="${local.common_name}-vpc"}
     )
 
+}
+
+resource "aws_internet_gateway" "main"{
+    vpc_id=aws_vpc.main.id 
+    tags=merge(
+        local.common_tags, 
+        { 
+            Name=local.common_name }
+    )
 }
