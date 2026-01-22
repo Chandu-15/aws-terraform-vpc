@@ -2,13 +2,13 @@ output "vpc_id"{
     value=aws_vpc.main.id
 }
 
-output "public_subnet_cidr"{
+output "public_subnet"{
     value=aws_subnet.public[*].id
 }
 
-output "private_subnet_cidr"{
+output "private_subnet"{
     value=aws_subnet.private[*].id
 }
-output "database_subnet_cidr"{
+output "database_subnet"{
     value=aws_subnet.database[*].id
 }
