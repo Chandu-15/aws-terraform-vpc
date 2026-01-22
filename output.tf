@@ -9,3 +9,6 @@ output "public_subnet_cidr"{
 output "private_subnet_cidr"{
     value=aws_subnet.private[*].id
 }
+output "database_subnet_cidr"{
+    value=aws_subnet.database[*].id
+}
