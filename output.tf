@@ -5,3 +5,7 @@ output "vpc_id"{
 output "public_subnet_cidr"{
     value=aws_subnet.public[*].id
 }
+
+output "private_subnet_cidr"{
+    value=aws_subnet.private[*].id
+}
