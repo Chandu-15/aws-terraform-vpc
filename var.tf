@@ -14,3 +14,18 @@ variable "vpc_tags"{
     type=map
     default={}
 }
+
+variable "igw_tags"{
+    type=map
+    default={}
+}
+
+
+variable "public_subnet_cidr"{
+    type=list
+}
+
+variable "public_subnet_tags"{
+    type=map
+    default={}
+}
