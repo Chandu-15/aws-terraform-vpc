@@ -49,7 +49,15 @@ variable "public_route_table_tags"{
     type=map
     default={}
 }
+variable "private_route_table_tags"{
+    type=map
+    default={}
+}
 variable "database_route_table_tags"{
     type=map
     default={}
+}
+variable "nat_gw_tags"{
+    type=map
+    default={}    
 }
