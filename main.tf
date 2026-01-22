@@ -131,7 +131,7 @@ resource "aws_eip" "eip"{
         var.igw_tags,
         local.common_tags, 
         { 
-            Name=${local.common_name}-nat-eip"
+            Name="${local.common_name}-nat-eip"
          }
     )
 
