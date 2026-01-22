@@ -126,7 +126,7 @@ resource "aws_route" "public"{
 }
 
 resource "aws_eip" "eip"{
-    domain=vpc
+    domain="vpc"
     tags=merge(
         var.igw_tags,
         local.common_tags, 
